@@ -1,0 +1,88 @@
+﻿body
+{
+    background-image: none;
+    margin-top: 0;
+    min-width: 240px;
+    width: 100%;
+}
+
+#header
+{
+    background-image: url('../images/logo-bird-150.png');
+    background-position: top right;
+    height: 150px;
+}
+
+#header-content
+{
+    top: 65px;
+    left: 1em;
+    padding-left: 0;
+}
+
+#header-names
+{
+    font-size: 40px;
+}
+
+#header-date
+{
+    font-size: 14px;
+}
+
+#sidebar
+{
+    float: none;
+    height: auto;
+    width: 100%;
+}
+
+html
+{
+    background: initial;
+}
+
+#sidebar2
+{
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-top: 0;
+}
+
+#sidebar li
+{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+#content
+{
+    border-left: none;
+    border-top: 2px solid #edb6cb;
+    float: none;
+    width: 100%;
+}
+
+    #content ul
+    {
+        padding-left: 2em;
+    }
+
+#content2
+{
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+#footer
+{
+    border-left: none;
+    float: left;
+    width: 100%;
+}
+
+#lodge-map
+{
+    display: none;
+}

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Photos";
+}
+
+<!-- Lila & Peter Photos-->
+
+<script>
+    var lilaPeterPictures = new Array();
+    var lilaPeterCache = new Array();
+
+    @{
+        List<string> files = new List<string>();
+        files.AddRange(Directory.GetFiles(Server.MapPath("~/Content/lilapeterphotos"), "*.jpg", SearchOption.TopDirectoryOnly));
+        files.AddRange(Directory.GetFiles(Server.MapPath("~/Content/lilapeterphotosportrait"), "*.jpg", SearchOption.TopDirectoryOnly));
+
+        for (int i = 0; i < files.Count; i++)
+        {
+            files[i] = files[i].Replace('\\', '/');
+            files[i] = files[i].Substring(files[i].IndexOf("/Content/", StringComparison.OrdinalIgnoreCase));
+            <text>lilaPeterPictures[@i] = "@files[i]";</text>
+        }
+    }
+
+    var nextPictureIndex = 0;
+    function NextPicture()
+    {
+        var pictureDiv = document.getElementById("LilaPeterPicture");
+        pictureDiv.style.backgroundImage = 'url("' + lilaPeterPictures[nextPictureIndex] + '")';
+        nextPictureIndex = (nextPictureIndex + 1) % lilaPeterPictures.length;
+
+        // Preload the next image
+        if (!lilaPeterCache[nextPictureIndex])
+        {
+            lilaPeterCache[nextPictureIndex] = new Image();
+            lilaPeterCache[nextPictureIndex].src = lilaPeterPictures[nextPictureIndex];
+        }
+    }
+</script>
+
+<div id="LilaPeterPicture" style="height:450px" class="picture-content" onclick="NextPicture()"><script>NextPicture();</script></div>
+<h1 style="text-align: center; margin-bottom: 1em"><a href="#" onclick="NextPicture(); return false;">Next Picture</a></h1>
