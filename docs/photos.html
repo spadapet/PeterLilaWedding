@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Lila & Peter - Photos</title>
+    <link href="./content/styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="./content/styles/layout-800.css" rel="stylesheet" type="text/css" media="only screen and (max-width: 800px)" />
+    <link href="./content/images/icon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div id="header">
+        <div id="header-content">
+            <p id="header-names">Lila <span class="logo-ampersand">&amp;</span> Peter</p>
+            <p id="header-date">August 29, 2015 &bull; Cedarbrook Lodge</p>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div id="sidebar2">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./party.html">Wedding Party</a></li>
+                <li><a href="./photos.html">Photos</a></li>
+                <li><a href="./visitor.html">Visitor Info</a></li>
+                <li><a href="./guests.html">Guest List</a></li>
+                <li><a href="./registry.html">Gift Registry</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="content2">
+            
+
+<!-- Lila & Peter Photos-->
+
+<script>
+    var lilaPeterPictures = new Array();
+    var lilaPeterCache = new Array();
+
+            lilaPeterPictures[0] = "./content/lilapeterphotos/1468__print.JPG";
+            lilaPeterPictures[1] = "./content/lilapeterphotos/DSC_0237.JPG";
+            lilaPeterPictures[2] = "./content/lilapeterphotos/DSC_0672.JPG";
+            lilaPeterPictures[3] = "./content/lilapeterphotos/DSC_2346.JPG";
+            lilaPeterPictures[4] = "./content/lilapeterphotos/IMG_0003.jpg";
+            lilaPeterPictures[5] = "./content/lilapeterphotos/IMG_0484.JPG";
+            lilaPeterPictures[6] = "./content/lilapeterphotos/IMG_0497.JPG";
+            lilaPeterPictures[7] = "./content/lilapeterphotos/IMG_0581 - Copy (2).JPG";
+            lilaPeterPictures[8] = "./content/lilapeterphotos/IMG_0911.JPG";
+            lilaPeterPictures[9] = "./content/lilapeterphotos/IMG_1192.jpg";
+            lilaPeterPictures[10] = "./content/lilapeterphotos/WP_20140823_014.jpg";
+            lilaPeterPictures[11] = "./content/lilapeterphotosportrait/DSC_2304.JPG";
+            lilaPeterPictures[12] = "./content/lilapeterphotosportrait/DSC_2404.JPG";
+            lilaPeterPictures[13] = "./content/lilapeterphotosportrait/DSC_2447.JPG";
+            lilaPeterPictures[14] = "./content/lilapeterphotosportrait/IMG_0560 (2).JPG";
+
+
+    var nextPictureIndex = 0;
+    function NextPicture()
+    {
+        var pictureDiv = document.getElementById("LilaPeterPicture");
+        pictureDiv.style.backgroundImage = 'url("' + lilaPeterPictures[nextPictureIndex] + '")';
+        nextPictureIndex = (nextPictureIndex + 1) % lilaPeterPictures.length;
+
+        // Preload the next image
+        if (!lilaPeterCache[nextPictureIndex])
+        {
+            lilaPeterCache[nextPictureIndex] = new Image();
+            lilaPeterCache[nextPictureIndex].src = lilaPeterPictures[nextPictureIndex];
+        }
+    }
+</script>
+
+<div id="LilaPeterPicture" style="height:450px" class="picture-content" onclick="NextPicture()"><script>NextPicture();</script></div>
+<h1 style="text-align: center; margin-bottom: 1em"><a href="#" onclick="NextPicture(); return false;">Next Picture</a></h1>
+
+        </div>
+    </div>
+    <div id="footer">
+        <p style="text-align: center"><a href="mailto:lilatran@outlook.com">lilatran@outlook.com</a></p>
+    </div>
+    
+    <div style="clear: both"></div>
+
+    
+    <script type="text/javascript">
+        var sc_project = 10087563;
+        var sc_invisible = 1;
+        var sc_security = "b9106b98";
+        var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+        document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="http://localhost:58416/5262121d71fd4eff83f472ec71358a8c/browserLink" async="async" id="__browserLink_initializationData" data-requestId="39e24ec836c3433ab49439a51978cc13" data-appName="Microsoft Edge"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
